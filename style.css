@@ -1,0 +1,160 @@
+@media only screen {
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-shadow: 0px 0px 6px #33ddff, 0px 0px 12px #33ddff, 0px 0px 12px #33ddff, 0px 0px 20px #33ddff, 0px 0px 20px #33ddff;
+  background-color: none;
+}
+
+body {
+  background-image: url('santa.jpg');
+  background-size: cover;
+}
+
+.container {
+  text-align: center;
+  
+  background-image: url("smallsnow.gif");
+  background-size: 100px;
+  background-repeat: repeat;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  padding: 4% 0%;
+  color: white;
+}
+
+h1 {
+  margin: 0% 0% 12% 0%;
+
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  flex: 3;
+  padding: 4% 4%;
+  flex-direction: column;
+  justify-content: right;
+}
+
+article {
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  justify-content: right;
+
+  padding: 4% 4%;
+  
+  text-align: left;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.description p {
+  margin: 2% 0%;
+}
+
+.description-contact {
+  margin: 2% 0%;
+}
+
+.profile-pic {
+  
+}
+
+img {
+  border-radius: 25px;
+  border: 6px white solid;
+  box-shadow: 0px 0px 12px #33ddff, 0px 0px 12px #33ddff, 0px 0px 12px #33ddff;
+}
+
+section {
+  display: flex;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  margin: 5%;
+  background-color: none;
+}
+
+.topic-table {
+  padding: 0px 2%;
+  flex: 1;
+}
+
+.stack-table {
+  padding: 0px 2%;
+  flex: 1;
+}
+
+.sleep-table {
+  padding: 0px 2%;
+  flex: 1;
+}
+
+.table-header {
+  font-size: 1.8rem;
+  margin: 1.4rem 0rem;
+}
+
+li {
+  margin: 1.4rem 0rem;
+}
+
+td {
+  display: flex;
+  justify-content: center;
+}
+
+th {
+  border: 3px white dotted;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+  * {
+    
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+  }
+
+  .table-header {
+    font-size: 3rem;
+  }
+
+  .topic-table {
+    padding: 2% 2%;
+    flex: 1;
+  }
+  
+  .stack-table {
+    padding: 2% 2%;
+    flex: 1;
+  }
+  
+  .sleep-table {
+    padding: 2% 2%;
+    flex: 1;
+  }
+
+  .profile-pic {
+    width: 50%;
+  }
+
+}
