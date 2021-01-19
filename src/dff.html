@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117840870-1"></script> -->
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-117840870-1');
+        </script>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <link href= "webStyle.css" rel="stylesheet" type="text/css">
+
+        <title>snordale</title>
+        
+    </head>
+    
+    <body>
+        
+        <div id="container">
+
+            <header>
+                
+                <div class="block name">
+                    <a href="index.html" id="name">Sam Nordale (aka Snord)</a>
+                    
+                </div>
+                
+                <div class="block nav">
+                    <div class="blog">
+                        <a href="blog.html" id="blog">Blog</a>
+                    </div>
+
+                    <div class="projects">
+                        <a href="projects.html" id="projects">Projects</a>
+                    </div>
+                </div>
+                
+                <div class="block email">
+                    <p id="email">snordale@gmail.com</p>
+                </div>
+                
+            </header>
+            
+            
+            
+            
+            
+            <div class="project-descrip">
+
+                <div class="project-header">
+                    <div class="title-and-back">
+                        <a class="icon-cont" href="projects.html">
+                            <img class="back-icon" src="back-icon.svg">
+                        </a>
+                        <p>
+                            Music Sharing Mobile App
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <div class="project-feature">
+                    <img id="myImg" src="dff-mockups.jpg">
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01">
+
+            </div>
+            
+
+            
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+        
+        <script src="isotope.pkgd.min.js"></script>
+        <script src="script.js"></script>
+        
+        
+        <script>
+            var $grid = $('.grid').isotope({
+                itemSelector: '.grid-item',
+                layoutMode: 'fitRows'  
+            });
+            $('.filter button').on("click", function(){
+                var value = $(this).attr('data-name');
+                $grid.isotope({
+                    filter: value 
+                });
+            });
+
+        </script>
+
+        <script>
+            $('.btn').mousedown(function() { this.blur() });
+            $('.btn').mouseup(function() { this.blur() });
+        </script>
+
+        
+        <script>    
+            $(document).ready(function() {
+                console.log();
+                $("#allButton").click(); 
+            });
+        </script>
+        
+        <script>
+            function playPause(btn, vid) {
+                var vid = document.getElementById(vid)
+                
+                vid.onended = function () {
+                    btn.innerHTML = "play";
+                }
+                if(vid.paused) {
+                    vid.play();
+                    btn.innerHTML = "pause";
+                   } else {
+                   vid.pause();
+                    btn.innerHTML = "play";
+                   }
+            
+                
+            }
+        </script>
+        
+        
+
+        
+  </body>
+</html>

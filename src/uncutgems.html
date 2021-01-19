@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117840870-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-117840870-1');
+        </script>
+
+        <link href= '/css/style.css' rel='stylesheet' type='text/css'>
+
+        <link rel='apple-touch-icon' sizes='180x180' href='/favicons/apple-touch-icon.png'>
+        <link rel='icon' type='image/png' sizes='32x32' href='/favicons/favicon-32x32.png'>
+        <link rel='icon' type='image/png' sizes='16x16' href='/favicons/favicon-16x16.png'>
+        <link rel='manifest' href='/site.webmanifest'>
+        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5'>
+        <meta name='msapplication-TileColor' content='#ffffff'>
+        <meta name='theme-color' content='#ffffff'>
+
+        <title>snordale</title>
+    </head>
+    
+  <body>
+    <div class='container'>
+      <header>
+        <a href='/index.html'>Sam Nordale (aka Snord)</a>
+            
+        <div class='nav'>
+          <div class='nav-option'>
+            <a href='/src/blog.html' id='blog'>Blog</a>
+          </div>
+
+          <div class='nav-option'>
+            <a href='/src/projects.html' id='projects'>Projects</a>
+          </div>
+        </div>
+
+        <p id='email'>snordale@gmail.com</p>
+      </header>
+        
+      <div class='all-projects'>
+        <div class='project'>
+          <div class='project-header'>
+            <h3 class='project-title'>
+              <a href='/src/projects.html'><img class='back-icon' src='/visual_assets/back_icon.svg'></a>
+              Uncut Gems Bootleg Copy
+            </h3>
+            <h4 class='project-date'>Winter '20</h4>
+          </div>
+                
+          <div class='project-main'>      
+            <div class='main-image'>
+              <div class='visual-description'>
+                
+              </div>
+              <img class='featured-image' id='uncut-gems-full' src='/visual_assets/uncut_mock_full_web.png'>
+              <!-- 
+              <img class='secondary-image' id='uncut-gems-featured-image' src='/visual_assets/uncut_mock_front_web.png'>
+              <img class='secondary-image' id='uncut-gems-featured-image' src='/visual_assets/uncut_mock_back_web.png'>
+              -->
+              <img class='secondary-image' id='uncut-gems-front' src='/visual_assets/uncut_mock_front_web.png'>
+              <img class='secondary-image' id='uncut-gems-back' src='/visual_assets/uncut_mock_back_web.png'>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class='footer'>
+        <div class='sitemap'>
+          <div class='group'>
+            <ul class='mobile-apps'>
+              Mobile Apps
+              <li><a href='/src/hub.html'>Hub</a></li>
+              <li><a href='/src/cliqued.html'>Cliqued</a></li>
+              <li><a href='/src/tether.html'>Tether</a></li>
+            </ul>
+          </div>
+
+          <div class='group'>
+            <ul class='web-apps'>
+              Web Apps
+              <li><a href='/src/hubstream.html'>Hubstream</a></li>
+            </ul>
+          </div>
+
+          <div class='group'>
+            <ul class='visual-design'>
+              Visual Design
+              <li><a href='/src/uncutgems.html'>Uncut Gems</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <p class='tag'>Snordale - snordale@gmail.com - 2020</p>
+      </div>
+    </div>
+    
+    <script src='/js/script.js'></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+    <script>
+      $('img').on('click', function() {
+        $(this).toggleClass("selected");
+      });
+    </script>
+  </body>
+</html>
