@@ -10,13 +10,12 @@
 
           gtag('config', 'UA-117840870-1');
         </script>
-        
+
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
 
-
-
-        <link href= '/css/style.css' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href= 'tempStyle.css' rel='stylesheet' type='text/css'>
 
         <link rel='apple-touch-icon' sizes='180x180' href='/favicons/apple-touch-icon.png'>
         <link rel='icon' type='image/png' sizes='32x32' href='/favicons/favicon-32x32.png'>
@@ -25,63 +24,69 @@
         <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5'>
         <meta name='msapplication-TileColor' content='#ffffff'>
         <meta name='theme-color' content='#ffffff'>
-
-        <title>snordale</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <title>Snordale</title>
     </head>
     
     <body>
-        <div class="container">
-            <header>
-                <a href='/index.html'>Sam Nordale (aka Snord)</a>
-                    
-                <div class='nav'>
-                    <div class='nav-option'>
-                        <a href='/src/blog.html' id='blog'>Blog</a>
-                    </div>
-        
-                    <div class='nav-option'>
-                        <a href='/src/projects.html' id='projects'>Projects</a>
-                    </div>
-                </div>
-        
-                <p id='email'>snordale@gmail.com</p>
-            </header>
-            
-            <div class="main">
-                <div class="signature-box">
-                    <img src="/visual_assets/signature.svg"class="signature">
-                </div>
-                
-                <p class="profile">
-                    Hey, I'm Snord.
-                    <br>
-                    <br>
-                    I’m 21 years old and I'm from Seattle, but I currently live in Montreal. I study Cognitive Science at McGill where I'll graduate from December 2020.
-                    <br>
-                    <br>
-                    In the near future, I want to learn more about how to build great digital products, new applications of artificial intelligence, and technology's relationship with psychology.
-                    <br>
-                    <br>
-                    Long-term I'd like to start my own company, whether it's building original software or helping other brands improve their product design.
-                </p>
+        <div class="container-fluid justify-content-center p-4">
+            <div class="row justify-content-left px-4">
+                <h1 class='p-8'>Sam Nordale</h1>
             </div>
+            <div class="row justify-content-left px-4">
+                <a class="pr-2" href="https://www.linkedin.com/in/samnordale/" target="blank">LinkedIn</a>
+                <a class="px-2"  href="https://github.com/snordale" target="blank">Github</a>
+                <a class="pl-2" href="https://www.behance.net/snordale" target="blank">Behance</a>
+            </div>
+            <h5 class="row col-9 justify-content-left px-4 pt-4">
+                Fullstack engineer with AI experience and a background in UI/UX design.
+            </h5>
+            <h5 class="row justify-content-left px-4 pt-4">
+                Currently working on <a class="pl-1" href="https://theivyplatform.com" target="blank">Ivy</a>.
+            </h5>
             
-            <div class="icon-container">
-                <a class="icon" href="https://www.linkedin.com/in/samnordale/" target="blank">
-                    <img src="/visual_assets/linkedin-icon.svg" class="linkedin">
-                </a>
-                
-                <a class="icon" href="https://github.com/snordale" target="blank">
-                    <img src="/visual_assets/github-icon.svg" class="icon github">
-                </a>
-                
-                <a class="icon" href="https://www.behance.net/snordale" target="blank">
-                    <img src="/visual_assets/behance-icon.svg" class="behance">
-                </a>
+
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div id="scene" >
             </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="three.js"></script>
+        <script>
+            const bgColor = new THREE.Color( 0xffffff );
+			const scene = new THREE.Scene();
+            scene.background = bgColor;
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+			const renderer = new THREE.WebGLRenderer();
+			//renderer.setSize( window.innerWidth, window.innerHeight );
+            let sceneDiv = document.getElementById('scene');
+            renderer.setSize($(sceneDiv).width(), $(sceneDiv).height());
+			sceneDiv.appendChild( renderer.domElement );
+            
+
+			const geometry = new THREE.BoxGeometry();
+			const material = new THREE.MeshBasicMaterial( { color: 0xf8f8f8 } );
+			const cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+            
+
+			camera.position.z = 5;
+
+			const animate = function () {
+				requestAnimationFrame( animate );
+
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+
+				renderer.render( scene, camera );
+			};
+
+			animate();
+        </script>
+
+        
         <script src="/js/script.js"></script>
   </body>
 </html>

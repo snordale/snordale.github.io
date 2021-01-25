@@ -1,0 +1,31 @@
+@font-face {
+    font-family: futuraBook;
+    src: url(/fonts/futura_book.ttf);
+  }
+  
+  @font-face {
+    font-family: futuraLight;
+    src: url(/fonts/futura_light.ttf)
+  }
+  
+  @font-face {
+    font-family: futuraMedium;
+    src: url(/fonts/futura_medium.ttf)
+  }
+  
+  @font-face {
+    font-family: futuraBold;
+    src: url(/fonts/futura_bold.otf)
+  }
+
+* {
+    font-family: futuraMedium;
+}
+
+body {
+}
+
+#scene {
+    height: 80vh;
+    width: 80vw;
+}
