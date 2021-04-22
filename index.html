@@ -28,64 +28,44 @@
         <title>Snordale</title>
     </head>
     
-    <body>
-        <div class="container-fluid justify-content-center p-4">
-            <div class="row justify-content-left px-4">
-                <h1 class='p-8'>Sam Nordale</h1>
-            </div>
-            <div class="row justify-content-left px-4">
-                <a class="pr-2" href="https://www.linkedin.com/in/samnordale/" target="blank">LinkedIn</a>
-                <a class="px-2"  href="https://github.com/snordale" target="blank">Github</a>
-                <a class="pl-2" href="https://www.behance.net/snordale" target="blank">Behance</a>
-            </div>
-            <h5 class="row col-9 justify-content-left px-4 pt-4">
-                Fullstack engineer with AI experience and a background in UI/UX design.
-            </h5>
-            <h5 class="row justify-content-left px-4 pt-4">
-                Currently working on <a class="pl-1" href="https://theivyplatform.com" target="blank">Ivy</a>.
-            </h5>
-            
+    <body class='flex-1' style='overflow-y:hidden;overflow: hidden;'>
 
+        <div class="row p-0 m-0 position-relative fixed-bottom justify-content-center">
+            <div class="container-fluid justify-content-center p-4">
+                <div class="row justify-content-left px-4 text-white">
+                    <h3 class='p-8' style='z-index: 100;'>Sam Nordale</h3>
+                </div>
+                <h6 class="row col-9 justify-content-left px-4 pt-4 text-white" style='z-index: 100;'>
+                    Fullstack engineer with AI experience and a background in product design.
+                </h6>
+                <h6 class="row justify-content-left px-4 pt-4 text-white" style='z-index: 100;'>
+                    <p style='z-index: 100;'>Currently working on </p><a class="px-2 bold text-white" style='z-index: 100;' href="https://theivyplatform.com" target="blank">Ivy</a><p style='z-index: 100;'>.</p>
+                </h6>
+            </div>
+            <video id='video'
+                style='position: absolute;'
+                autoplay
+            >
+                <source src="visual_assets/bowie.mp4" type="video/mp4">
+            </video>
         </div>
-        <div class="row position-absolute fixed-bottom justify-content-center">
-            <div class='' id="scene" >
-            </div>
-        </div>
-
-        <script src="three.js"></script>
-        <script>
-            const bgColor = new THREE.Color( 0xffffff );
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
-            const renderer = new THREE.WebGLRenderer( { alpha: true } );
-            //renderer.setSize( window.innerWidth, window.innerHeight );
-            let sceneDiv = document.getElementById('scene');
-            renderer.setSize($(sceneDiv).width(), $(sceneDiv).height());
-            sceneDiv.appendChild( renderer.domElement );
-            
-
-            const geometry = new THREE.BoxGeometry();
-            const material = new THREE.MeshBasicMaterial( { color: 0xcceeff } );
-            const cube = new THREE.Mesh( geometry, material );
-            scene.add( cube );
-            
-
-            camera.position.z = 5;
-
-            const animate = function () {
-                requestAnimationFrame( animate );
-
-                cube.rotation.x += 0.01;
-                cube.rotation.y += 0.01;
-
-                renderer.render( scene, camera );
-            };
-
-            animate();
-        </script>
-
-        
-        <script src="/js/script.js"></script>
   </body>
+        <script>
+            var $video  = $('#video'),
+            $window = $(window); 
+
+            $(window).resize(function(){
+                var height = $window.height();
+                $video.css('height', height);
+
+                var videoWidth = $video.width(),
+                    windowWidth = $window.width(),
+                marginLeftAdjust =   (windowWidth - videoWidth) / 2;
+
+                $video.css({
+                    'height': height, 
+                    'marginLeft' : marginLeftAdjust
+                });
+            }).resize();
+        </script>
 </html>

@@ -22,7 +22,8 @@
     font-family: futuraMedium;
 }
 
-body {
+.bold {
+    font-family: futuraBold;
 }
 
 #scene {
