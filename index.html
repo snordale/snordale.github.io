@@ -31,6 +31,15 @@
     <body class='flex-1' style='overflow-y:hidden;overflow: hidden;'>
 
         <div class="row p-0 m-0 position-relative fixed-bottom justify-content-center">
+            <video id='video'
+                style='position: absolute;'
+                autoplay
+                loop
+                muted 
+                playsinline
+            >
+                <source src="visual_assets/bowie.mp4" type="video/mp4">
+            </video>
             <div class="container-fluid justify-content-center p-4">
                 <div class="row justify-content-left px-4 text-white">
                     <h3 class='p-8' style='z-index: 100;'>Sam Nordale</h3>
@@ -42,17 +51,6 @@
                     <p style='z-index: 100;'>Currently working on </p><a class="px-2 bold text-white" style='z-index: 100;' href="https://theivyplatform.com" target="blank">Ivy</a><p style='z-index: 100;'>.</p>
                 </h6>
             </div>
-            <video id='video'
-                style='position: absolute;'
-                autoplay
-                loop
-                muted 
-                defaultMuted 
-                playsinline
-                preload="auto"
-            >
-                <source src="visual_assets/bowie.mp4" type="video/mp4">
-            </video>
         </div>
   </body>
         <script>
