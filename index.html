@@ -45,6 +45,12 @@
             <video id='video'
                 style='position: absolute;'
                 autoplay
+                loop="loop"
+                muted 
+                defaultMuted 
+                playsinline 
+                oncontextmenu="return false;"
+                preload="auto"
             >
                 <source src="visual_assets/bowie.mp4" type="video/mp4">
             </video>
@@ -67,5 +73,8 @@
                     'marginLeft' : marginLeftAdjust
                 });
             }).resize();
+
+            var video=document.getElementById("video");
+            video.muted = !video.muted;
         </script>
 </html>
