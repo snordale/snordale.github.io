@@ -33,10 +33,7 @@
         <div class="row p-0 m-0 position-relative fixed-bottom justify-content-center">
             <video id='video'
                 style='position: absolute;'
-                autoplay
                 loop
-                muted 
-                playsinline
             >
                 <source src="visual_assets/bowie.mp4" type="video/mp4">
             </video>
@@ -50,11 +47,14 @@
                 <h6 class="row justify-content-left px-4 pt-4 text-white" style='z-index: 100;'>
                     <p style='z-index: 100;'>Currently working on </p><a class="px-2 bold text-white" style='z-index: 100;' href="https://theivyplatform.com" target="blank">Ivy</a><p style='z-index: 100;'>.</p>
                 </h6>
+                <div class='row justify-content-left px-4 pt-4 text-white'>
+                    <h6 style='z-index: 100; cursor: pointer;' class='text-white' id='play-button'>Play</h6>
+                </div>
             </div>
         </div>
   </body>
         <script>
-            var $video  = $('#video'),
+            let $video  = $('#video'),
             $window = $(window); 
 
             $(window).resize(function(){
@@ -71,8 +71,17 @@
                 });
             }).resize();
 
-            var video=document.getElementById("video");
-            video.muted = !video.muted;
-            video.play()
+            let video = document.getElementById('video');
+            let playButton = document.getElementById('play-button')
+            playButton.addEventListener("click", function() {
+                if (video.paused) {
+                    video.play()
+                    playButton.innerHTML = 'Pause'
+                }
+                else {
+                    video.pause()
+                    playButton.innerHTML = 'Play'
+                }
+            });
         </script>
 </html>
