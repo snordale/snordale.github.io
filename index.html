@@ -4,11 +4,11 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117840870-1"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-          gtag('config', 'UA-117840870-1');
+            gtag('config', 'UA-117840870-1');
         </script>
 
         <meta charset='utf-8'>
@@ -28,69 +28,51 @@
         <title>Snordale</title>
     </head>
     
-    <body class='flex-1' style='overflow-y:hidden;overflow: hidden; background-color: black'>
+    <body class='d-flex flex-column justify-content-center px-4 py-5'>
+        <div id='non-image-content'>
+            <div style='position: sticky;' class='mb-3'>
+                <h5 id='name1' class='position-absolute m-0 bold glitch-item' style='z-index: 2;'>Sam Nordale</h5>
+                <h5 id='name2' class='position-absolute m-0 bold glitch-item glitch2' >Sam Nordale</h5>
+                <h5 id='name3' class='position-absolute m-0 bold glitch-item glitch3' >Sam Nordale</h5>
+                <h5 id='name4' class='position-absolute m-0 bold glitch-item glitch4' >Sam Nordale</h5>
+            </div>
+            <div class='py-2' style='z-index: 100;'>
+                Product + Fullstack
+            </div>
 
-        <div class="row p-0 m-0 position-relative fixed-bottom justify-content-center">
-            <video id='video'
-                style='position: absolute;'
-                loop
-            >
-                <source src="visual_assets/bowie.mp4" type="video/mp4">
-            </video>
-            <div class='container-fluid justify-content-center px-4 pt-5'>
-                <div class="row justify-content-left px-4 text-white">
-                    <h5 class='m-0' style='z-index: 100;'>Sam Nordale</h5>
-                </div>
-                <div class='row col-9 justify-content-left px-4 pt-4'>
-                    <div class='text-white m-0' style='z-index: 100;'>
-                        Product + Fullstack
-                    </div>
-                </div>
-                <div class='row col-9 justify-content-left px-4 pt-4'>
-                    <div class='d-flex text-white my-0' style='z-index: 100;'>
-                        <p class='m-0' style='z-index: 100;'>Currently working on </p><a class="px-2 bold text-white my-0" style='padding-top: 1px; z-index: 100;' href="https://theivyplatform.com" target="blank">Ivy</a>
-                    </div>
-                </div>
-                <!-- 
-                <div class='row col-9 justify-content-left px-4 pt-4'>
-                    <a class='m-0' href='https://open.spotify.com/user/22nhunwnw4v3gjtgvkcppj2pi?si=2da1b22591a242d9' target='_blank'>spotify</a>
-                </div>
-                -->
-                <div class='row justify-content-left px-4 pt-4 text-white'>
-                    <div style='z-index: 100; cursor: pointer;' class='text-white m-0' id='play-button'>Play</div>
-                </div>
+            <div class='my-2' style='z-index: 100;'>
+                <p class='d-inline m-0' style='z-index: 100;'>Currently working on </p><a class="m-0 bold" style='padding: 0px 1px;' href="https://theivyplatform.com" target="blank">Ivy</a>
+            </div>
+
+            <div class='my-2'>
+                <a href="https://www.linkedin.com/in/samnordale/" target="blank">
+                    <img src="/visual_assets/linkedin-icon.svg" class="icon">
+                </a>
+                
+                <a href="https://github.com/snordale" target="blank">
+                    <img src="/visual_assets/github-icon.svg" class="icon">
+                </a>
+                
+                <a href="https://www.behance.net/snordale" target="blank">
+                    <img src="/visual_assets/behance-icon.svg" class="icon">
+                </a>
             </div>
         </div>
-  </body>
-        <script>
-            let $video  = $('#video'),
-            $window = $(window); 
 
-            $(window).resize(function(){
-                var height = $window.height();
-                $video.css('height', height);
+        <img
+            src='visual_assets/moonwalker_color.gif'
+            class='image align-self-center py-3'
+        >
+        <img
+            src='visual_assets/ye_color.gif'
+            class='image align-self-center py-3'
+        >
+        <img
+            src='visual_assets/omar_color.gif'
+            class='image align-self-center py-3'
+        >
+    </body>
+    <script>
 
-                var videoWidth = $video.width(),
-                    windowWidth = $window.width(),
-                marginLeftAdjust =   (windowWidth - videoWidth) / 2;
-
-                $video.css({
-                    'height': height, 
-                    'marginLeft' : marginLeftAdjust
-                });
-            }).resize();
-
-            let video = document.getElementById('video');
-            let playButton = document.getElementById('play-button')
-            playButton.addEventListener("click", function() {
-                if (video.paused) {
-                    video.play()
-                    playButton.innerHTML = 'Pause'
-                }
-                else {
-                    video.pause()
-                    playButton.innerHTML = 'Play'
-                }
-            });
-        </script>
+    </script>
 </html>
