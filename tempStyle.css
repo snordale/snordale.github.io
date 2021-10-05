@@ -417,10 +417,12 @@ a:hover {
 
 .ticker-item {
     font-family: futuraBold;
+    text-transform: uppercase;
     display: inline-block;
     padding: 0 2rem;
+    padding-top: .1rem;
     font-size: 1.8rem;
-    color: white;
+    color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
 }
