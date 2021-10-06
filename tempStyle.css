@@ -355,6 +355,7 @@ a:hover {
 
 * { box-sizing: border-box; }
 
+
 @-webkit-keyframes ticker {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
@@ -381,73 +382,63 @@ a:hover {
   }
 }
 
-
 #ticker-wrap {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    overflow: hidden;
-    height: 4rem;
-    padding-left: 100%;
-    box-sizing: content-box;
-    
+  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 4rem;
+  background-color: rgba(#000, 0.9); 
+  padding-left: 100%;
+  box-sizing: content-box;
 }
-
 #ticker {
+
     display: inline-block;
-    height: 4rem;
-    line-height: 4rem;  
+
     white-space: nowrap;
     padding-right: 100%;
     box-sizing: content-box;
-
+    padding-top: .8rem;
+    padding-bottom: .4rem;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     -webkit-animation-iteration-count: infinite; 
             animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear;
    -webkit-animation-name: ticker;
            animation-name: ticker;
-    -webkit-animation-duration: 90s;
-            animation-duration: 90s;
-
-
-    border-top: 2px black solid;
-    border-bottom: 2px black solid;
+    -webkit-animation-duration: 60s;
+            animation-duration: 60s;
 }
-
 .ticker-item {
-    font-family: futuraBold;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 0 2rem;
-    padding-top: .1rem;
-    font-size: 1.8rem;
-    color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+  font-family: futuraBold;
+  text-transform: uppercase;
+  display: inline-block;
+
+  padding: 0 2rem;
+  font-size: 2rem;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black; 
+
 }
 
 @media only screen and (min-width: 600px) {
     #ticker-wrap {
         left: 0;
-        height: 10rem;
-        padding-bottom: 5rem;
         -webkit-transform: rotate(90deg);
         -moz-transform: rotate(90deg);
         -o-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
         transform: rotate(-90deg);
-    }
-
-    #ticker {
-        height: 5rem;
-        line-height: 5rem;
+        padding-bottom: 10.2rem;
     }
 
     .ticker-item {
+        
         font-size: 2.2rem;
     }
 }
-
-/* body { padding-bottom: 5rem; } */
-/* h1,h2,p {padding: 0 5%;} */
