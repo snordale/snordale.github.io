@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+</head>
+<body>
+    <div style='
+            display: flex;
+            padding: 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height:  100vh;
+        ' class="d-flex flex-column align-items-center"
+    >
+        <div class="clock">
+            <div class="header">
+                <h3 id="clock-header">WORK</h3>
+            </div>
+            <div class="icons">
+                <button class='sub-icon'></button>
+                <button class='add-icon'></button>
+                
+            </div>
+            <div class="clock-time">
+                <!-- <h2 class="timer">00:35:00</h2> -->
+                <input type='text' style='border: none; background: transparent;' class="timer" value='00:15:00'>
+            </div>
+            <div class="controls">
+                <button id="play">play</button>
+                <button id="reset">reset</button>
+            </div>
+        </div>
+        <div style='padding-top: 2rem;' class="d-flex flex-column flex-sm-row w-100 inks">
+            <div class="work-inks sub-inks active">
+                <div class="icons">
+                    <button class='sub-icon small-icon'></button>
+                    <button class='add-icon small-icon'></button>
+                    
+                </div>
+                <div class="inks-time">
+                    <input type='text' style='border: none; background: transparent;' class="timer" value='00:15:00'>
+                </div>
+                <div class="label">
+                    <button class="label-btn">work</button>
+                </div>
+            </div>
+            <div class="break-inks sub-inks">
+                <div class="icons">
+                    <button class='sub-icon small-icon'></button>
+                    <button class='add-icon small-icon'></button>
+                   
+                </div>
+                <div class="inks-time">
+                    <input type='text' style='border: none; background: transparent;' class="timer" value='00:15:00'>
+                </div>
+                <div class="label">
+                    <button class="label-btn">break</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>

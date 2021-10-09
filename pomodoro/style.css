@@ -1,0 +1,166 @@
+body {
+    font-family: proxima nova;
+    background-color: #170000;
+    color: #FFE9E9;
+    margin: 0;
+}
+
+svg {
+    transition: all 0.3s linear;
+}
+
+svg:hover {
+    stroke: #fff;
+    filter: drop-shadow(0 0 1px #00ffff) drop-shadow(0 0 1px #00ffff) drop-shadow(0 0 10px #00ffff);
+}
+
+h2, h3 {
+    margin: 0;
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
+
+.clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    font-family: neon;
+    font-size: 1.6rem;
+} 
+
+#clock-header {
+    color: #FFE9E9;
+    transition: all 0.3s linear;
+}
+
+#clock-header:hover {
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 0 0 8px #00ffff, 0 0 12px #00ffff, 0 0 6px #00ffff, 0 0 20px #00ffff;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.controls {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.sub-inks {
+    padding-top:1rem;
+    display: block;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+}
+
+.label button {
+    font-size: 1.2rem;
+    font-family: neon;
+    text-decoration: underline;
+}
+
+.clock-time > input {
+    width: 100%;
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.inks-time > input {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.timer {
+    color: #FFE9E9 !important;
+    outline: none;
+    letter-spacing: 0.3em;
+    margin-left: 0.3em;
+}
+
+.inks {
+    height: auto;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.inks-time {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.inks .sub-icon, 
+.inks .add-icon {
+    width: 8px;
+}
+
+button {
+    background-color: transparent;
+    color: #FFE9E9;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.controls button {
+    font-family: neon;
+    font-size: 1.4rem;
+    margin: 0 2vw;
+    transition: all 0.3s ease-in-out;
+}
+
+.controls button:hover {
+    cursor: pointer;
+}
+
+#play {
+    color: #FFE9E9;
+}
+
+#reset {
+    color: #FFE9E9;
+}
+
+#play:hover {
+    color: #fff;
+    text-shadow: 0 0 8px #00ffff, 0 0 12px #00ffff, 0 0 6px #00ffff, 0 0 20px #00ffff;
+}
+
+#reset:hover {
+    color: #fff;
+    text-shadow: 0 0 8px #00ffff, 0 0 12px #00ffff, 0 0 6px #00ffff, 0 0 20px #00ffff;
+}
+
+.label button{
+    text-decoration: none;
+    color: #FFE9E9;
+    transition: all 0.3s linear;
+}
+
+.label button:hover {
+    color: #fff;
+    text-shadow: 0 0 4px #00ffff, 0 0 8px #00ffff, 0 0 2px #00ffff, 0 0 16px #00ffff;
+}
