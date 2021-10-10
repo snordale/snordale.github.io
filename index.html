@@ -207,34 +207,47 @@
         let a = $('a')
         let datetime = $('.datetime')
 
+        const setDarkMode = () => {
+            themeIcons.css('fill', '#dddddd')
+            themeIcons.toggleClass('d-none')
+
+            body.css('color', '#dddddd')
+            a.attr('style', 'color: #dddddd !important;')
+
+            ticker.css('border-color', '#dddddd')
+            tickerItems.css('-webkit-text-stroke-color', '#ddd');
+
+            datetime.attr('style', 'border-color: #dddddd !important')
+            body.css('background', '#111111')
+        }
+        const setLightMode = () => {
+            themeIcons.css('fill', '#dddddd')
+            themeIcons.toggleClass('d-none')
+
+            body.css('color', '#dddddd')
+            a.attr('style', 'color: #dddddd !important;')
+
+            ticker.css('border-color', '#dddddd')
+            tickerItems.css('-webkit-text-stroke-color', '#ddd');
+
+            datetime.attr('style', 'border-color: #dddddd !important')
+            body.css('background', '#111111')
+        }
+
+        $(document).ready(function () {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                setDarkMode()
+            }
+        })
+
         lightSwitch.on('click', function() {
             darkMode = !darkMode;
             
             if (darkMode) {
-                themeIcons.css('fill', '#dddddd')
-                themeIcons.toggleClass('d-none')
-
-                body.css('color', '#dddddd')
-                a.attr('style', 'color: #dddddd !important;')
-
-                ticker.css('border-color', '#dddddd')
-                tickerItems.css('-webkit-text-stroke-color', '#ddd');
-
-                datetime.attr('style', 'border-color: #dddddd !important')
-                body.css('background', '#111111')
+                setDarkMode()
             }
             else {
-                themeIcons.css('fill', 'black')
-                themeIcons.toggleClass('d-none')
-
-                body.css('color', 'black')
-                a.css('color', 'black')
-
-                ticker.css('border-color', 'black')
-                tickerItems.css('-webkit-text-stroke-color', 'black');
-
-                datetime.attr('style', 'border-color: black !important')
-                body.css('background', 'white')
+                setLightMode()
             }
         })
     </script>
