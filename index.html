@@ -199,56 +199,57 @@
     </script>
 
     <script>
-        let darkMode = false
-        let lightSwitch = $('#light-switch')
-        let tickerItems = $('.ticker-item')
-        const themeIcons = $('.theme-icon')
-        let body = $('body')
-        let a = $('a')
-        let datetime = $('.datetime')
+      let darkMode = false
+      let lightSwitch = $('#light-switch')
+      let tickerItems = $('.ticker-item')
+      const themeIcons = $('.theme-icon')
+      let body = $('body')
+      let a = $('a')
+      let datetime = $('.datetime')
 
-        const setDarkMode = () => {
-            themeIcons.css('fill', '#dddddd')
-            themeIcons.toggleClass('d-none')
+      const setDarkMode = () => {
+        darkMode = true
+        themeIcons.css('fill', '#dddddd')
+        themeIcons.toggleClass('d-none')
 
-            body.css('color', '#dddddd')
-            a.attr('style', 'color: #dddddd !important;')
+        body.css('color', '#dddddd')
+        a.attr('style', 'color: #dddddd !important;')
 
-            ticker.css('border-color', '#dddddd')
-            tickerItems.css('-webkit-text-stroke-color', '#ddd');
+        ticker.css('border-color', '#dddddd')
+        tickerItems.css('-webkit-text-stroke-color', '#ddd');
 
-            datetime.attr('style', 'border-color: #dddddd !important')
-            body.css('background', '#111111')
+        datetime.attr('style', 'border-color: #dddddd !important')
+        body.css('background', '#111111')
+      }
+
+      const setLightMode = () => {
+          darkMode = false
+          themeIcons.css('fill', 'black')
+          themeIcons.toggleClass('d-none')
+
+          body.css('color', 'black')
+          a.attr('style', 'color: black !important;')
+
+          ticker.css('border-color', 'black')
+          tickerItems.css('-webkit-text-stroke-color', 'black');
+
+          datetime.attr('style', 'border-color: black !important')
+          body.css('background', 'white')
+      }
+
+      $(document).ready(function () {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          setDarkMode()
         }
-        const setLightMode = () => {
-            themeIcons.css('fill', '#dddddd')
-            themeIcons.toggleClass('d-none')
+      })
 
-            body.css('color', '#dddddd')
-            a.attr('style', 'color: #dddddd !important;')
-
-            ticker.css('border-color', '#dddddd')
-            tickerItems.css('-webkit-text-stroke-color', '#ddd');
-
-            datetime.attr('style', 'border-color: #dddddd !important')
-            body.css('background', '#111111')
+      lightSwitch.on('click', function() {
+        if (darkMode) {
+          setLightMode()
         }
-
-        $(document).ready(function () {
-          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            darkMode = true
-            setDarkMode()
-          }
-        })
-
-        lightSwitch.on('click', function() {
-          darkMode = !darkMode;
-          if (darkMode) {
-            setDarkMode()
-          }
-          else {
-            setLightMode()
-          }
-        })
+        else {
+          setDarkMode()
+        }
+      })
     </script>
 </html>
