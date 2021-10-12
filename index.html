@@ -235,20 +235,20 @@
         }
 
         $(document).ready(function () {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                setDarkMode()
-            }
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            darkMode = true
+            setDarkMode()
+          }
         })
 
         lightSwitch.on('click', function() {
-            darkMode = !darkMode;
-            
-            if (darkMode) {
-                setDarkMode()
-            }
-            else {
-                setLightMode()
-            }
+          darkMode = !darkMode;
+          if (darkMode) {
+            setDarkMode()
+          }
+          else {
+            setLightMode()
+          }
         })
     </script>
 </html>
