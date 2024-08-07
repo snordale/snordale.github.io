@@ -1,360 +1,355 @@
 @font-face {
-    font-family: futuraBook;
-    src: url(/fonts/futura_book.ttf);
-  }
-  
-  @font-face {
-    font-family: futuraLight;
-    src: url(/fonts/futura_light.ttf)
-  }
-  
-  @font-face {
-    font-family: futuraMedium;
-    src: url(/fonts/futura_medium.ttf)
-  }
-  
-  @font-face {
-    font-family: futuraBold;
-    src: url(/fonts/futura_bold.otf)
-  }
+  font-family: futuraBook;
+  src: url(/fonts/futura_book.ttf);
+}
+
+@font-face {
+  font-family: futuraLight;
+  src: url(/fonts/futura_light.ttf);
+}
+
+@font-face {
+  font-family: futuraMedium;
+  src: url(/fonts/futura_medium.ttf);
+}
+
+@font-face {
+  font-family: futuraBold;
+  src: url(/fonts/futura_bold.otf);
+}
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 * {
-    font-family: futuraMedium;
+  font-family: futuraMedium;
 }
 
-html, body {
-    padding: 0;
-    margin: 0;
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 
 div {
-    font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .border-bottom {
-    padding-bottom: 4px;
-    border-bottom: 2px solid black !important;
+  padding-bottom: 4px;
+  border-bottom: 2px solid black !important;
 }
 
 .theme-icon {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .theme-icon:hover {
-    fill: rgb(146, 0, 110) !important;
+  fill: rgb(146, 0, 110) !important;
 }
 
 .datetime {
-    font-size: .6rem;
+  font-size: 0.6rem;
 }
 
 .image {
-    width: 300px;
-    height: 300px;
-    background-size: contain;
+  width: 300px;
+  height: 300px;
+  background-size: contain;
 }
 
 .icon {
-    width: 18px;
-    height: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 .bold {
-    font-family: futuraBold;
+  font-family: futuraBold;
 }
 
-a, a:visited {
-    text-decoration: underline !important;
-    color: black !important;
+a,
+a:visited {
+  font-size: 0.8rem;
 }
 
-a:hover {
-    opacity: .3;
-}
-
-.no-underline, .no-underline:hover, .no-underline:visited {
-    text-decoration: none !important;
+.no-underline,
+.no-underline:hover,
+.no-underline:visited {
+  text-decoration: none !important;
 }
 
 #scene {
-    height: 50vh;
-    width: 50vw;
+  height: 50vh;
+  width: 50vw;
 }
 
 #name1 {
-    text-align: center;
-    z-index: 99999;
+  text-align: center;
+  z-index: 99999;
 }
 
 #name2 {
-    text-align: center;
-    
+  text-align: center;
 }
 
 #name3 {
-    text-align: center;
-    
+  text-align: center;
 }
 
 #name4 {
-    text-align: center;
- 
+  text-align: center;
 }
 
 .glitch-item {
-    margin: 0;
-    line-height: 0;
+  margin: 0;
+  line-height: 0;
 }
 
-.glitch2 { 
-    color: #00ffff;
-    animation: glitch2 2s infinite;
+.glitch2 {
+  color: #00ffff;
+  animation: glitch2 2s infinite;
 }
 
-.glitch3 { 
-    color: #ffff00;
-    animation: glitch3 2s infinite;
+.glitch3 {
+  color: #ffff00;
+  animation: glitch3 2s infinite;
 }
 
-.glitch4 { 
-    color: #ff00ff;
-    fill: #ff00ff;
-    background: #ff00ff;
-    animation: glitch4 2s infinite;
+.glitch4 {
+  color: #ff00ff;
+  fill: #ff00ff;
+  background: #ff00ff;
+  animation: glitch4 2s infinite;
 }
-
 
 /*Keyframes*/
 
 @keyframes glitch1 {
-    0% {
-      transform: none;
-      opacity: 1;
-    }
-    7% {
-      transform: skew(-0.5deg, -0.9deg);
-      opacity: 0.75;
-    }
-    10% {
-      transform: none;
-      opacity: 1;
-    }
-    27% {
-      transform: none;
-      opacity: 1;
-    }
-    30% {
-      transform: skew(0.8deg, -0.1deg);
-      opacity: 0.75;
-    }
-    35% {
-      transform: none;
-      opacity: 1;
-    }
-    52% {
-      transform: none;
-      opacity: 1;
-    }
-    55% {
-      transform: skew(-1deg, 0.2deg);
-      opacity: 0.75;
-    }
-    50% {
-      transform: none;
-      opacity: 1;
-    }
-    72% {
-      transform: none;
-      opacity: 1;
-    }
-    75% {
-      transform: skew(0.4deg, 1deg);
-      opacity: 0.75;
-    }
-    80% {
-      transform: none;
-      opacity: 1;
-    }
-    100% {
-      transform: none;
-      opacity: 1;
-    }
+  0% {
+    transform: none;
+    opacity: 1;
   }
-  
-  @keyframes glitch2 {
-    0% {
-      transform: none;
-      opacity: 0.25;
-    }
-    7% {
-      transform: translate(-2px, -4px);
-      opacity: 0.5;
-    }
-    10% {
-      transform: none;
-      opacity: 0.25;
-    }
-    27% {
-      transform: none;
-      opacity: 0.25;
-    }
-    30% {
-      transform: translate(2px, -4px);
-      opacity: 0.5;
-    }
-    35% {
-      transform: none;
-      opacity: 0.25;
-    }
-    52% {
-      transform: none;
-      opacity: 0.25;
-    }
-    55% {
-      transform: translate(-2px, 3px);
-      opacity: 0.5;
-    }
-    50% {
-      transform: none;
-      opacity: 0.25;
-    }
-    72% {
-      transform: none;
-      opacity: 0.25;
-    }
-    75% {
-      transform: translate(-2px, 4px);
-      opacity: 0.5;
-    }
-    80% {
-      transform: none;
-      opacity: 0.25;
-    }
-    100% {
-      transform: none;
-      opacity: 0.25;
-    }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
   }
-  
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-2px, -4px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(2px, -4px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-2px, 3px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(-2px, 4px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
 @keyframes glitch3 {
-    0% {
-        transform: none;
-        opacity: 0.25;
-    }
-    7% {
-      transform: translate(2px, 4px);
-      opacity: 0.5;
-    }
-    10% {
-      transform: none;
-      opacity: 0.25;
-    }
-    27% {
-      transform: none;
-      opacity: 0.25;
-    }
-    30% {
-      transform: translate(2px, 4px);
-      opacity: 0.5;
-    }
-    35% {
-      transform: none;
-      opacity: 0.25;
-    }
-    52% {
-      transform: none;
-      opacity: 0.25;
-    }
-    55% {
-      transform: translate(-2px, 2px);
-      opacity: 0.5;
-    }
-    50% {
-      transform: none;
-      opacity: 0.25;
-    }
-    72% {
-      transform: none;
-      opacity: 0.25;
-    }
-    75% {
-      transform: translate(2px, 2px);
-      opacity: 0.5;
-    }
-    80% {
-      transform: none;
-      opacity: 0.25;
-    }
-    100% {
-      transform: none;
-      opacity: 0.25;
-    }
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(2px, 4px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(2px, 4px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-2px, 2px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 2px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
 }
 
 @keyframes glitch4 {
-    0% {
-        transform: none;
-        opacity: 0.25;
-    }
-    7% {
-      transform: translate(-1px, 2px);
-      opacity: 0.5;
-    }
-    10% {
-      transform: none;
-      opacity: 0.25;
-    }
-    27% {
-      transform: none;
-      opacity: 0.25;
-    }
-    30% {
-      transform: translate(-2px, 2px);
-      opacity: 0.5;
-    }
-    35% {
-      transform: none;
-      opacity: 0.25;
-    }
-    52% {
-      transform: none;
-      opacity: 0.25;
-    }
-    55% {
-      transform: translate(-1px, -2px);
-      opacity: 0.5;
-    }
-    50% {
-      transform: none;
-      opacity: 0.25;
-    }
-    72% {
-      transform: none;
-      opacity: 0.25;
-    }
-    75% {
-      transform: translate(2px, 2px);
-      opacity: 0.5;
-    }
-    80% {
-      transform: none;
-      opacity: 0.25;
-    }
-    100% {
-      transform: none;
-      opacity: 0.25;
-    }
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-1px, 2px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(-2px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-1px, -2px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 2px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
 }
-
 
 /* Ticker Style */
 
-* { box-sizing: border-box; }
-
+* {
+  box-sizing: border-box;
+}
 
 @-webkit-keyframes ticker {
   0% {
@@ -383,35 +378,33 @@ a:hover {
 }
 
 #ticker-wrap {
-  
   position: fixed;
   bottom: 0;
   width: 600px;
   overflow: hidden;
   height: 4rem;
-  background-color: rgba(#000, 0.9); 
+  background-color: rgba(#000, 0.9);
   padding-left: 100%;
   box-sizing: content-box;
 }
 #ticker {
+  display: inline-block;
 
-    display: inline-block;
-
-    white-space: nowrap;
-    padding-right: 100%;
-    box-sizing: content-box;
-    padding-top: .8rem;
-    padding-bottom: .4rem;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    -webkit-animation-iteration-count: infinite; 
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-   -webkit-animation-name: ticker;
-           animation-name: ticker;
-    -webkit-animation-duration: 80s;
-            animation-duration: 80s;
+  white-space: nowrap;
+  padding-right: 100%;
+  box-sizing: content-box;
+  padding-top: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 80s;
+  animation-duration: 80s;
 }
 .ticker-item {
   font-family: futuraBold;
@@ -422,24 +415,22 @@ a:hover {
   font-size: 2rem;
   color: transparent;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black; 
-
+  -webkit-text-stroke-color: black;
 }
 
 @media only screen and (min-width: 600px) {
-    #ticker-wrap {
-        width: 100%;
-        left: 0;
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(-90deg);
-        padding-bottom: 10.2rem;
-    }
+  #ticker-wrap {
+    width: 100%;
+    left: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(-90deg);
+    padding-bottom: 10.2rem;
+  }
 
-    .ticker-item {
-        
-        font-size: 2.2rem;
-    }
+  .ticker-item {
+    font-size: 2.2rem;
+  }
 }
