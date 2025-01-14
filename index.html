@@ -1,209 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-117840870-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "UA-117840870-1");
-    </script>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
 
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+  <title>Snordale</title>
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      href="tempStyle.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <!-- Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link href="tempStyle.css" rel="stylesheet" type="text/css" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicons/favicon-16x16.png"
-    />
-    <link
-      rel="manifest"
-      href="/site.webmanifest"
-    />
-    <link
-      rel="mask-icon"
-      href="/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <meta
-      name="msapplication-TileColor"
-      content="#ffffff"
-    />
-    <meta
-      name="theme-color"
-      content="#ffffff"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <title>Snordale</title>
-  </head>
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 
-  <body class="d-flex flex-column p-4">
-    <div>Sam Nordale</div>
-    <div>Brooklyn, NY</div>
-    <div>snordale at gmail dot com</div>
-    <a
-      href="https://fairsquaremedicare.com"
-      target="_blank"
-    >
-      <div>Making software at Fair Square (YC W20)</div>
-    </a>
-    <a
-      href="https://theivyplatform.com"
-      target="_blank"
-    >
-      Made a music sharing app called Ivy
-    </a>
-  </body>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117840870-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "UA-117840870-1");
+  </script>
+</head>
+
+<body class="d-flex flex-column p-4 gap-1">
+  <div>Sam Nordale</div>
+  <div>Brooklyn, NY <span id="brooklynTime"></span></div>
+  <div>snordale at gmail dot com</div>
+  <div class="d-flex gap-2">
+    <a class="cursor-pointer text-black" href="https://github.com/snordale" target="_blank">GitHub</a>
+    <a class="cursor-pointer text-black" href="https://linkedin.com/in/samnordale" target="_blank">LinkedIn</a>
+  </div>
+  <a class="cursor-pointer" href="https://fairsquaremedicare.com" target="_blank">
+    <div>Currently making software at Fair Square (YC W20)</div>
+  </a>
+  <a class="cursor-pointer" href="https://theivyplatform.com" target="_blank">
+    Ivy: Make playlists with friends
+  </a>
+  <a class="cursor-pointer" href="https://x.com/CalvinB0t" target="_blank">
+    CalvinB0t
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
 
   <script>
-    function shuffle(array) {
-      let currentIndex = array.length,
-        randomIndex;
-
-      while (currentIndex != 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        [array[currentIndex], array[randomIndex]] = [
-          array[randomIndex],
-          array[currentIndex],
-        ];
-      }
-
-      return array;
+    // Update Brooklyn time
+    function updateBrooklynTime() {
+      const time = new Date().toLocaleTimeString('en-US', {
+        timeZone: 'America/New_York',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      });
+      document.getElementById('brooklynTime').textContent = time;
     }
+    updateBrooklynTime();
+    setInterval(updateBrooklynTime, 200);
 
-    const ticker = $("#ticker");
-
-    let tickerContents = [
-      "never sell out.",
-      "all gas no breaks.",
-      "fortune favors the bold.",
-      "no fear, no envy, no meanness.",
-      "dopeness is what i like the most.",
-      "my eyes were dimmed with the suffusion of two small drops of joy.",
-      "diligence in thy calling.",
-      "this the new me so get used to me.",
-      "blessed be the day.",
-      "they may think it's a movement...and that's what it is.",
-      "love is kinda like i wanna say a fog in the morning when you wake up before the sun comes out...it's just there a little while and then it burns away.",
-      "i can't lose 'cause i can't leave it to you.",
-      "some of the people some of the time.",
-      "die lit.",
-      "junya watanabe on my wrist.",
-      "i can't really see...where did i miss?",
-      "topa tha mornin'",
-      "the world is yours.",
-      "life is good, why settle for less?",
-      "thank you for not discussing the outside world.",
-      "do you see this coat?",
-      //"shut the fuck up and enjoy the greatness",
-      "software is art",
-    ];
-
-    ticker.append(
-      shuffle(tickerContents).map((content) => {
-        return $(`<div class="ticker-item">${content}</div>`);
-      })
-    );
-  </script>
-
-  <script>
+    // Disable right click
     document.addEventListener("contextmenu", (event) => event.preventDefault());
-  </script>
 
-  <script>
-    let darkMode = false;
-    let lightSwitch = $("#light-switch");
-    let tickerItems = $(".ticker-item");
-    const themeIcons = $(".theme-icon");
-    let body = $("body");
-    let a = $("a");
-    let datetime = $(".datetime");
-
-    const setDarkMode = () => {
-      darkMode = true;
-      themeIcons.css("fill", "#dddddd");
-      themeIcons.toggleClass("d-none");
-
-      body.css("color", "#dddddd");
-      a.attr("style", "color: #dddddd !important;");
-
-      ticker.css("border-color", "#dddddd");
-      tickerItems.css("-webkit-text-stroke-color", "#ddd");
-
-      datetime.attr("style", "border-color: #dddddd !important");
-      body.css("background", "#111111");
-    };
-
-    const setLightMode = () => {
-      darkMode = false;
-      themeIcons.css("fill", "black");
-      themeIcons.toggleClass("d-none");
-
-      body.css("color", "black");
-      a.attr("style", "color: black !important;");
-
-      ticker.css("border-color", "black");
-      tickerItems.css("-webkit-text-stroke-color", "black");
-
-      datetime.attr("style", "border-color: black !important");
-      body.css("background", "white");
-    };
-
+    // Dark mode detection
     $(document).ready(function () {
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        setDarkMode();
-      }
-    });
+      const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      const handleDarkMode = (e) => {
+        document.body.classList.toggle('dark-mode', e.matches);
+      };
 
-    lightSwitch.on("click", function () {
-      if (darkMode) {
-        setLightMode();
-      } else {
-        setDarkMode();
-      }
+      darkModeMediaQuery.addListener(handleDarkMode);
+      handleDarkMode(darkModeMediaQuery);
     });
   </script>
+</body>
+
 </html>

@@ -23,7 +23,7 @@
 }
 
 * {
-  font-family: futuraMedium;
+  font-family: monospace;
 }
 
 html,
@@ -65,7 +65,8 @@ div {
 }
 
 .bold {
-  font-family: futuraBold;
+  font-family: monospace;
+  font-weight: bold;
 }
 
 a,
@@ -407,7 +408,8 @@ a:visited {
   animation-duration: 80s;
 }
 .ticker-item {
-  font-family: futuraBold;
+  font-family: monospace;
+  font-weight: bold;
   text-transform: uppercase;
   display: inline-block;
 
