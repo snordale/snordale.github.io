@@ -48,6 +48,9 @@
   <a class="cursor-pointer" href="https://x.com/CalvinB0t" target="_blank">
     CalvinB0t
   </a>
+  <a class="cursor-pointer" href="https://haskanyedropped.com" target="_blank">
+    Has Kanye Dropped?
+  </a>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -77,8 +80,10 @@
       const handleDarkMode = (e) => {
         document.body.classList.toggle('dark-mode', e.matches);
       };
-
-      darkModeMediaQuery.addListener(handleDarkMode);
+      
+      // Modern event listener
+      darkModeMediaQuery.addEventListener("change", handleDarkMode);
+      // Initial check
       handleDarkMode(darkModeMediaQuery);
     });
   </script>
