@@ -32,8 +32,8 @@ body {
   margin: 0;
 }
 
-div {
-  font-size: 0.8rem;
+div, a {
+  font-size: .9rem !important;
 }
 
 .border-bottom {
@@ -47,10 +47,6 @@ div {
 
 .theme-icon:hover {
   fill: rgb(146, 0, 110) !important;
-}
-
-.datetime {
-  font-size: 0.6rem;
 }
 
 .image {
@@ -67,11 +63,6 @@ div {
 .bold {
   font-family: monospace;
   font-weight: bold;
-}
-
-a,
-a:visited {
-  font-size: 0.8rem;
 }
 
 .no-underline,
