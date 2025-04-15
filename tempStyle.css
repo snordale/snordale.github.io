@@ -451,3 +451,8 @@ body.dark-mode #ticker {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
 }
+
+/* Custom smaller font size */
+.extra-small-text {
+  font-size: 0.75rem !important; /* Adjust as needed */
+}
