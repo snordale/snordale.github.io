@@ -98,8 +98,13 @@
     // Dark mode detection
     $(document).ready(function () {
       const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
       const handleDarkMode = (e) => {
         document.body.classList.toggle('dark-mode', e.matches);
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute('content', e.matches ? '#1a1a1a' : '#ffffff');
+        }
       };
 
       // Modern event listener
