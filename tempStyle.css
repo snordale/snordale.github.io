@@ -439,6 +439,10 @@ body.dark-mode a:visited {
   color: #ffffff !important;
 }
 
+body.dark-mode .text-muted {
+  color: #cccccc !important;
+}
+
 body.dark-mode .border-bottom {
   border-bottom: 2px solid white !important;
 }
